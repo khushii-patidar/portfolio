@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Khushbu Patidar — Frontend Developer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- Decorative editor gutter -->
+<div class="gutter" id="gutter" aria-hidden="true"></div>
+
+<!-- Tab bar (nav) -->
+<header class="tabbar">
+  <div class="tabbar-inner">
+    <div class="tabbar-brand">
+      <span class="dot dot-red"></span><span class="dot dot-yellow"></span><span class="dot dot-green"></span>
+    </div>
+    <nav class="tabs" id="tabs">
+      <a href="#hero" class="tab active" data-target="hero"><span class="tab-file">Home</span></a>
+      <a href="#about" class="tab" data-target="about"><span class="tab-file">About</span></a>
+      <a href="#skills" class="tab" data-target="skills"><span class="tab-file">Skills</span></a>
+      <a href="#projects" class="tab" data-target="projects"><span class="tab-file">Projects</span></a>
+      <a href="#contact" class="tab" data-target="contact"><span class="tab-file">Contact</span></a>
+    </nav>
+  </div>
+</header>
+
+<main class="editor">
+
+  <!-- HERO -->
+  <section id="hero" class="section hero">
+    <p class="prompt-line"><span class="prompt-sym">&gt;</span> whoami</p>
+    <h1 class="hero-name" id="typedName"><span class="cursor">|</span></h1>
+    <p class="hero-role"><span class="comment">// </span><span id="typedRole"></span><span class="cursor cursor-role">|</span></p>
+    <p class="hero-tagline">
+      Motivated MCA student who builds clean, responsive, user-friendly interfaces —
+      and enjoys understanding the full stack underneath them.
+    </p>
+    <div class="hero-actions">
+      <a href="#projects" class="btn btn-primary">View Projects</a>
+      <a href="resume.pdf" class="btn btn-ghost" download>Download Résumé</a>
+      <a href="https://github.com/khushii-patidar" target="_blank" rel="noopener" class="btn btn-ghost">GitHub ↗</a>
+    </div>
+  </section>
+
+  <div class="scroll-hint" aria-hidden="true">
+    <span>scroll</span>
+    <div class="scroll-line"></div>
+  </div>
+
+  <!-- ABOUT -->
+  <section id="about" class="section">
+    <!-- <p class="eyebrow">// about.js</p> -->
+    <h2 class="section-heading">About Me</h2>
+
+    <p class="about-bio">
+      Hi, I'm Khushbu — a frontend developer who enjoys turning ideas into clean, responsive
+      interfaces. I'm currently pursuing my MCA, and I like understanding the full stack behind
+      the pages I build — from Python and Django on the backend, to the small JavaScript details
+      that make an interface feel right.
+    </p>
+
+    <h3 class="subheading" id="education">Education</h3>
+    <div class="edu-list">
+      <div class="edu-card">
+        <p class="edu-degree">Master of Computer Applications <span class="tag tag-live">ongoing</span></p>
+        <p class="edu-inst">Indore International College</p>
+      </div>
+      <!-- <div class="edu-card">
+        <p class="edu-degree">Bachelor of Computer Applications (BCA) <span class="tag">CGPA 7.97</span></p>
+        <p class="edu-inst">Mandsaur Institute of Technology — MIT</p>
+      </div> -->
+      <!-- <div class="edu-card">
+        <p class="edu-degree">12th Standard <span class="tag">78%</span></p>
+        <p class="edu-inst">Adarsh Higher Secondary School, Sitamau</p>
+      </div> -->
+    </div>
+
+    <div class="about-meta">
+      <!-- <p><span class="meta-label">Languages</span> Hindi, English</p> -->
+      <p><span class="meta-label">Open to</span> Internship / Fresher Frontend roles</p>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" class="section">
+    <!-- <p class="eyebrow">// skills.json</p> -->
+    <h2 class="section-heading">Skills</h2>
+
+    <div class="skills-grid">
+      <div class="skill-block">
+        <p class="skill-key">Frontend</p>
+        <div class="chip-row">
+          <span class="chip chip-a">HTML5</span>
+          <span class="chip chip-a">CSS3</span>
+          <span class="chip chip-a">JavaScript (ES6)</span>
+          <span class="chip chip-a">DOM Manipulation</span>
+        </div>
+      </div>
+      <div class="skill-block">
+        <p class="skill-key">Backend</p>
+        <div class="chip-row">
+          <span class="chip chip-b">Python</span>
+          <span class="chip chip-b">Django</span>
+        </div>
+      </div>
+      <div class="skill-block">
+        <p class="skill-key">Database</p>
+        <div class="chip-row">
+          <span class="chip chip-c">SQLite</span>
+        </div>
+      </div>
+      <div class="skill-block">
+        <p class="skill-key">Tools &amp; Platforms</p>
+        <div class="chip-row">
+          <span class="chip chip-d">Git</span>
+          <span class="chip chip-d">GitHub</span>
+          <span class="chip chip-d">VS Code</span>
+          <span class="chip chip-d">Render</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="section">
+    <!-- <p class="eyebrow">// projects.jsx</p> -->
+    <h2 class="section-heading">Projects</h2>
+
+    <div class="projects-grid">
+
+      <article class="project-card">
+        <div class="window-bar">
+          <span class="dot dot-red"></span><span class="dot dot-yellow"></span><span class="dot dot-green"></span>
+          <span class="window-title">EduDesk</span>
+        </div>
+        <div class="project-body">
+          <h3 class="project-title">EduDesk — Student Management System</h3>
+          <p class="project-desc">
+            A responsive student management dashboard with add, edit, delete, search and filter
+            functionality. Live stats, interactive modals, and toast notifications — built with
+            vanilla JavaScript and DOM manipulation.
+          </p>
+          <div class="tech-row">
+            <span class="tech-tag">HTML</span>
+            <span class="tech-tag">CSS</span>
+            <span class="tech-tag">JavaScript</span>
+          </div>
+          <div class="project-links">
+            <a href="https://khushii-patidar.github.io/Student-Management-system/" target="_blank" rel="noopener" class="proj-link proj-link-live">
+              <span class="live-dot"></span> Live Demo
+            </a>
+            <a href="https://github.com/khushii-patidar/Student-Management-system" target="_blank" rel="noopener" class="proj-link">
+              View Code ↗
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <div class="window-bar">
+          <span class="dot dot-red"></span><span class="dot dot-yellow"></span><span class="dot dot-green"></span>
+          <span class="window-title">RecipeHub-AI</span>
+        </div>
+        <div class="project-body">
+          <h3 class="project-title">RecipeHub-AI — Recipe Sharing Platform</h3>
+          <p class="project-desc">
+            A Django-based recipe sharing platform with user authentication, recipe management,
+            and an AI-powered kitchen assistant. Deployed live on Render with production-ready
+            configuration.
+          </p>
+          <div class="tech-row">
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">Django</span>
+            <span class="tech-tag">AI Integration</span>
+          </div>
+          <div class="project-links">
+            <a href="https://recipehub-ai.onrender.com" target="_blank" rel="noopener" class="proj-link proj-link-live">
+              <span class="live-dot"></span> Live Demo
+            </a>
+            <a href="https://github.com/khushii-patidar/Recipehub-AI" target="_blank" rel="noopener" class="proj-link">
+              View Code ↗
+            </a>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section contact-section">
+    <!-- <p class="eyebrow">// contact.md</p> -->
+    <h2 class="section-heading">Get In Touch</h2>
+    <p class="contact-intro">Have a role in mind, or just want to say hi? I'd love to hear from you.</p>
+
+    <div class="contact-list">
+      <button class="contact-row" id="copyEmail" type="button">
+        <span class="contact-icon">✉</span>
+        <span class="contact-value">khushboopatidar888@gmail.com</span>
+        <span class="contact-hint" id="copyHint">click to copy</span>
+      </button>
+
+      <a class="contact-row" href="tel:9340297224">
+        <span class="contact-icon">☎</span>
+        <span class="contact-value">9340297224</span>
+      </a>
+
+      <a class="contact-row" href="https://github.com/khushii-patidar" target="_blank" rel="noopener">
+        <span class="contact-icon">⌥</span>
+        <span class="contact-value">github.com/khushii-patidar</span>
+      </a>
+    </div>
+
+    <p class="contact-outro">Available for internship / fresher frontend roles.</p>
+  </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="site-footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <span class="footer-name">Khushbu Patidar</span>
+        <!-- <span class="footer-role">Frontend Developer</span> -->
+      </div>
+
+      <!-- <nav class="footer-nav">
+        <a href="#about">About</a>
+        <a href="#education">Education</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav> -->
+
+      <div class="footer-socials">
+        <a href="mailto:khushboopatidar888@gmail.com" aria-label="Email" title="Email">
+          <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 5h18v14H3z"/><path d="M3 6l9 7 9-7"/></svg>
+        </a>
+        <a href="https://github.com/khushii-patidar" target="_blank" rel="noopener" aria-label="GitHub" title="GitHub">
+          <svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.7.5.9 5.3.9 11.6c0 5 3.2 9.2 7.7 10.7.6.1.8-.2.8-.6v-2.2c-3.1.7-3.8-1.3-3.8-1.3-.5-1.3-1.2-1.7-1.2-1.7-1-.7.1-.6.1-.6 1.1.1 1.7 1.1 1.7 1.1 1 1.7 2.6 1.2 3.2 1 .1-.7.4-1.2.7-1.5-2.5-.3-5.1-1.2-5.1-5.5 0-1.2.4-2.2 1.1-3-.1-.3-.5-1.4.1-2.9 0 0 .9-.3 3 1.1a10.4 10.4 0 0 1 5.4 0c2.1-1.4 3-1.1 3-1.1.6 1.5.2 2.6.1 2.9.7.8 1.1 1.8 1.1 3 0 4.3-2.6 5.2-5.1 5.5.4.3.8 1 .8 2.1v3.1c0 .4.2.7.8.6 4.5-1.5 7.7-5.7 7.7-10.7C23.1 5.3 18.3.5 12 .5z"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/in/khushbu-patidar-524799381" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn">
+          <svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor"><path d="M20.4 20.4h-3.5v-5.6c0-1.3 0-3-1.9-3s-2.1 1.4-2.1 2.9v5.7H9.3V9h3.4v1.6h.1c.5-.9 1.6-1.9 3.4-1.9 3.6 0 4.3 2.4 4.3 5.5v6.2zM5.3 7.4a2 2 0 1 1 0-4 2 2 0 0 1 0 4zM7 20.4H3.5V9H7v11.4z"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© <span id="year"></span> All Rights Reserved.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
